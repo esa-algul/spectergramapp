@@ -1,0 +1,105 @@
+<html>
+    <body onkeydown="keypressed()">
+        <span id="gun" style="position: absolute; top:500; left: 80">
+            <pre>
+               /\
+            __|  |__
+            </pre>
+        </span>
+    </body>
+    <body onload="createsomething()">
+    </body>
+
+
+    <script>
+        var count = 0;
+        var spooky;
+    function createsomething(){
+        var time = window.setInterval(function(){
+            spooky = document.createElement("IMG");
+            spooky.setAttribute("src", "file:///C:/Users/Admin/Desktop/Spectergram/Spooky.jpg");
+            spooky.setAttribute("width", "50px");
+            spooky.setAttribute("height", "50px");
+            spooky.setAttribute("alt", "Spooky");
+            var left = parseInt(Math.random()*500);
+            var top = parseInt(Math.random()*400);
+            spooky.style.position="absolute";
+            spooky.style.left=left;
+            spooky.style.top=top;
+            var time2 = window.setInterval(function(){
+                top -=15;
+                spooky.style.top= top;
+                left -=15;
+                spooky.style.left = left;
+        if(top<=10){
+            document.body.removeChild(spooky);
+            createsomething();
+        }
+        if(left<=-90){
+            document.body.removeChild(spooky);
+            createsomething();
+        }
+        if(top>=1000){
+            document.body.removeChild(spooky);
+            createsomething();
+        }
+            }, 1000);
+            document.body.appendChild(spooky);
+            count++;
+            if(count>=1){
+                window.clearInterval(time);
+            }
+        }, 1000);
+    }
+
+            var timer;
+
+    function keypressed(){
+        var ref = document.getElementById("gun");
+        var left1 = parseInt(ref.style.left);
+        if(event.keyCode==39){
+            left1+=10;
+        }
+        if(event.keyCode==37){
+            left1-=10;
+        }
+        if(left1<=-90){
+            left1=-90
+        }
+        if(left1>=1000){
+            left1=1000;
+        }
+        if(event.keyCode==32){
+            var bullet = document.createElement("span");
+            bullet.innerHTML="*";
+            bullet.style.position="absolute";
+            bullet.style.left=left1+111;
+            document.body.appendChild(bullet);
+            bullet.style.top = 509;
+            timer = window.setInterval(function() {
+                var top = parseInt(bullet.style.top);
+                top-=1;
+                bullet.style.top= top;
+    
+                if (top<=5){
+                window.clearInterval(timer);
+                document.body.removeChild(bullet);
+                } 
+
+                if (( (top==parseInt(spooky.style.top)+50)) & (parseInt(bullet.style.left)>=parseInt(spooky.style.left)) &
+                parseInt(bullet.style.left)<=parseInt(spooky.style.left)+50
+                ){
+                    document.body.removeChild(bullet);
+                    document.body.removeChild(spooky);
+                    window.alert("Got Him!");
+                    createsomething();
+                } 
+            }, 5);
+        
+        ref.style.left=left1;
+        
+    }
+    ref.style.left=left1;
+    }
+    </script>
+</html>

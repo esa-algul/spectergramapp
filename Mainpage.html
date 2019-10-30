@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Spectergram/Posts</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Spectergram</a>
+				</div>
+				<ul class="nav navbar-nav">
+                    <li class="active"><a href="file:///C:/Users/Admin/Desktop/Spectergram/com.nationwide.spectergram/src/main/resources/static/HomePage.html">Home</a></li>
+                    <li class="active"><a href="file:///C:/Users/Admin/Desktop/Spectergram/com.nationwide.spectergram/src/main/resources/static/Mainpage.html">Posts</a></li>
+                    <li class="active"><a href="">Ouiji</a></li>
+                    <li class="active"><a href="">Catch Spooky</a></li>
+				</ul>
+			</nav>
+				<h2>Posts: </h2>
+				<ul class="list-group">
+				</ul>
+				<hr>
+		<h2>Add new Post: </h2>
+		<form>
+			<div class="form-group">
+				<label for="heading">Heading:</label> <input type="text"
+					class="form-control" id="heading">
+			</div>
+			<div class="form-group">
+				<label for="place">Place:</label> <input type="text"
+					class="form-control" id="place">
+			</div>
+			<div class="form-group">
+				<label for="city">City:</label> <input type="text"
+					class="form-control" id="city">
+			</div>
+			<div class="form-group">
+				<label for="description">Description:</label> <input type="text"
+					class="form-control" id="description">
+			</div>
+			<div class="form-group">
+				<label for="date">Date:</label> <input type="text"
+					class="form-control" id="date">
+			</div>
+			<div class="form-group">
+				<label for="name">Name:</label> <input type="text"
+					class="form-control" id="name">
+			</div>
+			<button type="submit" class="btn btn-primary pull-right" onclick="clickMe()">Submit</button>
+		</form>
+			</div>
+	</div>
+	<script src="js/spgposts.js"></script>
+</body>
+</html>
