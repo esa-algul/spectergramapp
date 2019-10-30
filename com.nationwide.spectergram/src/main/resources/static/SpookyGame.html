@@ -1,9 +1,9 @@
 <html>
-    <body onkeydown="keypressed()">
-        <span id="gun" style="position: absolute; top:500; left: 80">
+    <body onkeydown="keypressed()"; bgcolor="black" >
+        <span id="gun" style="position: absolute; top:500; left: 80; color:white;">
             <pre>
                /\
-            __|  |__
+            __||||__
             </pre>
         </span>
     </body>
@@ -17,7 +17,7 @@
     function createsomething(){
         var time = window.setInterval(function(){
             spooky = document.createElement("IMG");
-            spooky.setAttribute("src", "file:///C:/Users/Admin/Desktop/Spectergram/Spooky.jpg");
+            spooky.setAttribute("src", "Spooky.jpg");
             spooky.setAttribute("width", "50px");
             spooky.setAttribute("height", "50px");
             spooky.setAttribute("alt", "Spooky");
@@ -73,6 +73,7 @@
             var bullet = document.createElement("span");
             bullet.innerHTML="*";
             bullet.style.position="absolute";
+            bullet.style.color="greenyellow";
             bullet.style.left=left1+111;
             document.body.appendChild(bullet);
             bullet.style.top = 509;
