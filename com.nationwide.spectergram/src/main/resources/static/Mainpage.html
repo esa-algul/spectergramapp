@@ -13,54 +13,54 @@
 	
 </head>
 <body onload="getAllspgposts()"; background="/mainpage bgimage.jpg">
-	<div class="container" style="background-color: darkslategray;">
-		<nav class="navbar navbar-default" style="background-color: darkslategray;">
-			<div class="container-fluid" style="background-color: darkslategray;">
-				<div class="navbar-header" style="background-color: darkslategray;">
-					<a class="navbar-brand" href="#" style="background-color: darkslategray;" style="color: aliceblue;">Spectergram</a>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid" style="background-color: dimgrey;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#" style="background-color: dimgrey; color: darkred;">Spectergram</a>
 				</div>
-				<ul class="nav navbar-nav" style="background-color: darkslategray;">
-                    <li class="active"><a href="index.html" style="background-color: darkslategray;" style="color: aliceblue;">Home</a></li>
-                    <li class="active"><a href="Mainpage.html" style="background-color: darkslategray;" style="color: aliceblue;">Posts</a></li>
-                    <li class="active"><a href="OuijaBoard.html" style="background-color: darkslategray;" style="color: aliceblue;">Ouiji</a></li>
-                    <li class="active"><a href="SpookyGame.html" style="background-color: darkslategray;" style="color: aliceblue;">Catch Spooky</a></li>
+				<ul class="nav navbar-nav" style="background-color: dimgray;">
+                    <li class="active"><a href="index.html" style="background-color: dimgray; color: darkred;">Home</a></li>
+                    <li class="active"><a href="Mainpage.html" style="background-color: dimgray; color: darkred;">Posts</a></li>
+                    <li class="active"><a href="OuijaBoard.html" style="background-color: dimgray; color: darkred;">Ouiji</a></li>
+                    <li class="active"><a href="SpookyGame.html" style="background-color: dimgray; color: darkred;">Catch Spooky</a></li>
 				</ul>
 			</div>
 		</nav>
-				<h2 style="color: aliceblue;">Posts: </h2>
-				<div class="list-group" id="dynamicContent" style="color: aliceblue;">
+				<h2 style="color: darkred;">Posts: </h2>
+				<div class="list-group" id="dynamicContent" style="color: darkred;">
 	
 	
 				</div>
 				
 				<hr>
-		<h2 style="color: aliceblue;">Add new Post: </h2>
+		<h2 style="color: darkred;">Add new Post: </h2>
 		<form>
 			<div class="form-group">
-				<label for="heading" style="color: aliceblue;">Heading:</label> <input type="text"
-					class="form-control" id="heading">
+				<label for="heading" style="color: darkred;">Heading:</label> <input type="text"
+					class="form-control" id="heading" style="background-color: dimgray; color: darkgoldenrod;">
 			</div>
 			<div class="form-group">
-				<label for="place" style="color: aliceblue;">Place:</label> <input type="text"
-					class="form-control" id="place">
+				<label for="place" style="color: darkred;">Place:</label> <input type="text"
+					class="form-control" id="place" style="background-color: dimgray; color: darkgoldenrod;">
 			</div>
 			<div class="form-group">
-				<label for="city" style="color: aliceblue;">City:</label> <input type="text"
-					class="form-control" id="city">
+				<label for="city" style="color: darkred;">City:</label> <input type="text"
+					class="form-control" id="city" style="background-color: dimgray; color: darkgoldenrod;">
 			</div>
 			<div class="form-group">
-				<label for="description" style="color: aliceblue;">Description:</label> <input type="text"
-					class="form-control" id="description">
+				<label for="description" style="color: darkred;">Description:</label> <input type="text"
+					class="form-control" id="description" style="background-color: dimgray; color: darkgoldenrod;">
 			</div>
 			<div class="form-group">
-				<label for="date" style="color: aliceblue;">Date:</label> <input type="text"
-					class="form-control" id="date">
+				<label for="date" style="color: darkred;">Date:</label> <input type="text"
+					class="form-control" id="date" style="background-color: dimgray; color: darkgoldenrod;">
 			</div>
 			<div class="form-group">
-				<label for="name" style="color: aliceblue;">Name:</label> <input type="text"
-					class="form-control" id="name">
+				<label for="name" style="color: darkred;">Name:</label> <input type="text"
+					class="form-control" id="name" style="background-color: dimgray; color: darkgoldenrod;">
 			</div>
-			<button type="button" class="btn btn-primary pull-right" onclick="savePost(); getAllspgposts()">Submit</button>
+			<button type="button" class="btn pull-right" onclick="savePost(); getAllspgposts()">Submit</button>
 		</form>
 			</div>
 			
@@ -114,8 +114,8 @@
 						</form>
    					   </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick = "updatePost()">Save changes</button>
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn" onclick = "updatePost()">Save changes</button>
       </div>
     </div>
   </div>
