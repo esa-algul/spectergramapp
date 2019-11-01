@@ -1,108 +1,140 @@
-function getData() {
-    noteRequest("GET");
+//$(document).ready(function() {
+//	setTimeout(function() {
+//		getAllspgposts();
+//   }, 1000);
+//})
+
+function getAllspgposts() {
+
+	$.ajax({
+		type : "GET",
+		url : "http://"+location.hostname+":9001/spectergramapp/spgposts",
+		success : function(data) {
+			
+			$.each(data, function(index, spgposts) {
+//				console.log(spgposts);
+				$('#dynamicContent').append(
+						"<h4>" + spgposts.heading + "</h4>" +
+						'<li >' + spgposts.place
+						+ ", " + spgposts.city + ", " + spgposts.date + ", " + spgposts.name + '</li>' +
+						
+			"<br>"	+		
+	  "<div class='btn-group'>" +
+	    "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalCenter' onclick = 'showModal(" + spgposts.id +")'>View</button>" +
+	    "<button type='button' class='btn btn-danger' onclick = 'deletePost(" + spgposts.id +")'>Delete</button>" +
+	  	"</div>" + "<br>"
+				)
+
+			});
+		}
+	});
 }
 
-function savePost(event) {
-    event.preventDefault();
-    let data = event.target.noteValue.value;
-    if(data){
-        sp("POST", {"text": data});
-    } 
-    event.target.noteValue.value = "";
-    return false;
+function showModal(id) {
+	console.log(id);
+	let request = new XMLHttpRequest();
+	request.open("GET", "http://"+location.hostname+":9001/spectergramapp/spgposts/"+id);
+
+	request.onload = function(){
+		let data = JSON.parse(request.response);
+		updateModalBox(data);		
+	}
+	request.send();
 }
 
-function updateNote(event){
-    event.preventDefault();
-    let body ={
-        id: event.target.parentElement.parentElement.id,
-        text: event.target.noteText.value
-    }   
-
-    noteRequest("PUT", body);
+function updateModalBox(information) {
+	console.log("hello");
+	let id = document.getElementById("editid");
+	id.value = information.id;
+	let heading = document.getElementById("editheading");
+	heading.value = information.heading;
+	let place = document.getElementById("editplace");
+	place.value = information.place;
+	let city = document.getElementById("editcity");
+	city.value = information.city;
+	let description = document.getElementById("editdescription");
+	description.value = information.description;
+	let date = document.getElementById("editdate");
+	date.value = information.date;
+	let name = document.getElementById("editname");
+	name.value = information.name;
 }
 
-function deleteNote(event){
-    let id = event.target.parentElement.id;
-    noteRequest("DELETE", "", id);
+function savePost() {
+	var heading = document.getElementById('heading').value;
+	var place = document.getElementById('place').value;
+	var city = document.getElementById('city').value;
+	var description = document.getElementById('description').value;
+	var date = document.getElementById('date').value;
+	var name = document.getElementById('name').value;
+	var spgposts = new Object();
+	spgposts.heading = heading;
+	spgposts.place = place;
+	spgposts.city = city;
+	spgposts.description = description;
+	spgposts.date = date;
+	spgposts.name = name;
+	var spgpostsJSON = JSON.stringify(spgposts);
+	
+	$.ajax({
+		type : "POST",
+		url : "http://"+location.hostname+":9001/spectergramapp/spgposts",
+		contentType : "application/json",
+		data : spgpostsJSON,
+		success : function(data) {
+			console.log(data);
+		},
+		error : function(data) {
+			console.log(data);
+		},
+		dataType : 'json'
+	});
+	location.reload();
 }
 
-function showData(request) {
-    let list = document.getElementById("notes");
-    list.innerHTML = "";
+function deletePost(id){
+	$.ajax({
+		type : "DELETE",
+		url : "http://"+location.hostname+":9001/spectergramapp/spgposts/" +id,
+		success : function(data) {
 
-    let notes = JSON.parse(request.response);
+	alert("deleted successfully");
+	location.reload();
 
-    let makeNote = (note) => {
-        let listItem = document.createElement("li");
-        
-        let para = document.createElement("p");
-        para.innerText = note.text;
-        para.setAttribute("onclick", "addInput(event)")
-        listItem.setAttribute("id", note.id);
-        
-        let button = document.createElement("button");
-        button.innerText = "Delete";
-        button.setAttribute("onclick", "deleteNote(event)")        
-        listItem.appendChild(para);
-        listItem.appendChild(button);
-        list.appendChild(listItem)
-    }
-
-    notes.forEach(note => makeNote(note))
+		}
+})
 }
 
-function addInput(event){
-    let note = event.target;
-    note.removeAttribute("onclick");
-    let text = note.innerText;
-    note.innerText = "";
-    
-    let form = document.createElement("form");
-    let inputBox = document.createElement("input");
-    form.setAttribute("onsubmit", "updateNote(event)");
-    inputBox.type = "text";
-    inputBox.name = "noteText";
-    inputBox.value = text;
-    let submit = document.createElement("submit");
-    submit.className = "hidden";
-    form.appendChild(inputBox);
-    form.appendChild(submit);
-    note.appendChild(form);
+function updatePost(){
+	var id = document.getElementById('editid').value;
+	var heading = document.getElementById('editheading').value;
+	var place = document.getElementById('editplace').value;
+	var city = document.getElementById('editcity').value;
+	var description = document.getElementById('editdescription').value;
+	var date = document.getElementById('editdate').value;
+	var name = document.getElementById('editname').value;
+	var spgposts = new Object();
+	spgposts.id = id;
+	spgposts.heading = heading;
+	spgposts.place = place;
+	spgposts.city = city;
+	spgposts.description = description;
+	spgposts.date = date;
+	spgposts.name = name;
+	var spgpostsJSON = JSON.stringify(spgposts);
+
+	$.ajax({
+		type : "PUT",
+		url : "http://"+location.hostname+":9001/spectergramapp/spgposts/",
+		contentType : "application/json",
+		data : spgpostsJSON,
+		success : function(data) {
+			console.log(data);
+		},
+		error : function(data) {
+			console.log(data);
+		},
+		dataType : 'json'
+	});
+	location.reload();
 }
-
-function noteRequest(method, body, extension) {
-    if (!extension){
-        extension = "";
-    } 
-    let endpoint = "note/" + extension;
-    method = method.toUpperCase();
-    let callback;
-    method == "GET" ? callback = showData : callback = getData; 
-    let headers = {
-        "Content-Type": "application/json"
-    }
-
-    body ? body = JSON.stringify(body) : body = undefined;
-
-    httpRequest(method, endpoint, callback, headers, body);
-}
-
-
-function httpRequest(method, endpoint, callback, headers, body){
-    let URL = "http://" + location.host + ":8081/";
-    let request = new XMLHttpRequest();
-    console.log(URL + endpoint)
-    request.open(method, URL + endpoint);
-    request.onload = () => {
-        callback(request);
-    }
-    
-    for(let key in headers){
-        request.setRequestHeader(key, headers[key]);
-    }
-
-    body ? request.send(body) : request.send();
-}
-
-getData();

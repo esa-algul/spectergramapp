@@ -3,6 +3,7 @@ package com.nationwide.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,29 +18,35 @@ import com.nationwide.persistence.domain.spgposts;
 
 
 @RestController
-@RequestMapping("/spectergramapp")
+@CrossOrigin("*")
+@RequestMapping("/spectergramapp/spgposts")
 public class SpectergramController {
 
 	@Autowired
 	private SpectergramService spgService;
-
-	@GetMapping("/spgposts")
+	
+	@GetMapping
 	public List<spgposts> getAllspgposts() {
 		return spgService.getAllspgposts();
 	}
 
-	@PostMapping("/spgposts")
+	@GetMapping("/{id}")
+	public spgposts getSpgPostsByID(@PathVariable Long id) throws Exception {
+		return spgService.getSpgPostsByID(id);
+	}
+
+	@PostMapping
 	public spgposts savePost(@RequestBody spgposts PostToSave) {
 		return spgService.savePost(PostToSave);
 	}
-
-	@PutMapping("/spgposts")
-	public spgposts updatePost(@RequestBody spgposts PostToUpdate) {
+	
+	@PutMapping
+	public String updatePost(@RequestBody spgposts PostToUpdate) {
 		return spgService.updatePost(PostToUpdate);
 	}
 
-	@DeleteMapping("/spgposts/{id}")
-	public String deltePost(@PathVariable(value = "id") long id) {
+	@DeleteMapping("/{id}")
+	public String deletePost(@PathVariable(value = "id") long id) {
 		spgService.deletePost(id);
 		return "Deleted!";
 	}
