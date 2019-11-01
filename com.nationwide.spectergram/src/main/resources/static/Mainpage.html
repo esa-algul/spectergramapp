@@ -12,52 +12,52 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	
 </head>
-<body onload="getAllspgposts()">
-	<div class="container">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Spectergram</a>
+<body onload="getAllspgposts()"; background="/mainpage bgimage.jpg">
+	<div class="container" style="background-color: darkslategray;">
+		<nav class="navbar navbar-default" style="background-color: darkslategray;">
+			<div class="container-fluid" style="background-color: darkslategray;">
+				<div class="navbar-header" style="background-color: darkslategray;">
+					<a class="navbar-brand" href="#" style="background-color: darkslategray;" style="color: aliceblue;">Spectergram</a>
 				</div>
-				<ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li class="active"><a href="Mainpage.html">Posts</a></li>
-                    <li class="active"><a href="OuijaBoard.html">Ouiji</a></li>
-                    <li class="active"><a href="SpookyGame.html">Catch Spooky</a></li>
+				<ul class="nav navbar-nav" style="background-color: darkslategray;">
+                    <li class="active"><a href="index.html" style="background-color: darkslategray;" style="color: aliceblue;">Home</a></li>
+                    <li class="active"><a href="Mainpage.html" style="background-color: darkslategray;" style="color: aliceblue;">Posts</a></li>
+                    <li class="active"><a href="OuijaBoard.html" style="background-color: darkslategray;" style="color: aliceblue;">Ouiji</a></li>
+                    <li class="active"><a href="SpookyGame.html" style="background-color: darkslategray;" style="color: aliceblue;">Catch Spooky</a></li>
 				</ul>
 			</div>
 		</nav>
-				<h2>Posts: </h2>
-				<div class="list-group" id="dynamicContent">
+				<h2 style="color: aliceblue;">Posts: </h2>
+				<div class="list-group" id="dynamicContent" style="color: aliceblue;">
 	
 	
 				</div>
 				
 				<hr>
-		<h2>Add new Post: </h2>
+		<h2 style="color: aliceblue;">Add new Post: </h2>
 		<form>
 			<div class="form-group">
-				<label for="heading">Heading:</label> <input type="text"
+				<label for="heading" style="color: aliceblue;">Heading:</label> <input type="text"
 					class="form-control" id="heading">
 			</div>
 			<div class="form-group">
-				<label for="place">Place:</label> <input type="text"
+				<label for="place" style="color: aliceblue;">Place:</label> <input type="text"
 					class="form-control" id="place">
 			</div>
 			<div class="form-group">
-				<label for="city">City:</label> <input type="text"
+				<label for="city" style="color: aliceblue;">City:</label> <input type="text"
 					class="form-control" id="city">
 			</div>
 			<div class="form-group">
-				<label for="description">Description:</label> <input type="text"
+				<label for="description" style="color: aliceblue;">Description:</label> <input type="text"
 					class="form-control" id="description">
 			</div>
 			<div class="form-group">
-				<label for="date">Date:</label> <input type="text"
+				<label for="date" style="color: aliceblue;">Date:</label> <input type="text"
 					class="form-control" id="date">
 			</div>
 			<div class="form-group">
-				<label for="name">Name:</label> <input type="text"
+				<label for="name" style="color: aliceblue;">Name:</label> <input type="text"
 					class="form-control" id="name">
 			</div>
 			<button type="button" class="btn btn-primary pull-right" onclick="savePost(); getAllspgposts()">Submit</button>
