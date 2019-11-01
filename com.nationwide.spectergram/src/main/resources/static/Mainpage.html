@@ -11,10 +11,15 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	
+	<style>
+		body{
+			font-family: monospace;
+		}
+	</style>
 </head>
 <body onload="getAllspgposts()"; background="/mainpage bgimage.jpg">
 	<div class="container">
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" style="    border-color: dimgrey;">
 			<div class="container-fluid" style="background-color: dimgrey;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#" style="background-color: dimgrey; color: darkred;">Spectergram</a>
@@ -23,7 +28,7 @@
                     <li class="active"><a href="index.html" style="background-color: dimgray; color: darkred;">Home</a></li>
                     <li class="active"><a href="Mainpage.html" style="background-color: dimgray; color: darkred;">Posts</a></li>
                     <li class="active"><a href="OuijaBoard.html" style="background-color: dimgray; color: darkred;">Ouiji</a></li>
-                    <li class="active"><a href="SpookyGame.html" style="background-color: dimgray; color: darkred;">Catch Spooky</a></li>
+                    <!-- <li class="active"><a href="SpookyGame.html" style="background-color: dimgray; color: darkred;">Catch Spooky</a></li> -->
 				</ul>
 			</div>
 		</nav>
@@ -38,29 +43,29 @@
 		<form>
 			<div class="form-group">
 				<label for="heading" style="color: darkred;">Heading:</label> <input type="text"
-					class="form-control" id="heading" style="background-color: dimgray; color: darkgoldenrod;">
+					class="form-control" id="heading" style="background-color: dimgray; color: darkgoldenrod; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
 				<label for="place" style="color: darkred;">Place:</label> <input type="text"
-					class="form-control" id="place" style="background-color: dimgray; color: darkgoldenrod;">
+					class="form-control" id="place" style="background-color: dimgray; color: darkgoldenrod; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
 				<label for="city" style="color: darkred;">City:</label> <input type="text"
-					class="form-control" id="city" style="background-color: dimgray; color: darkgoldenrod;">
+					class="form-control" id="city" style="background-color: dimgray; color: darkgoldenrod; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
 				<label for="description" style="color: darkred;">Description:</label> <input type="text"
-					class="form-control" id="description" style="background-color: dimgray; color: darkgoldenrod;">
+					class="form-control" id="description" style="background-color: dimgray; color: darkgoldenrod; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
 				<label for="date" style="color: darkred;">Date:</label> <input type="text"
-					class="form-control" id="date" style="background-color: dimgray; color: darkgoldenrod;">
+					class="form-control" id="date" style="background-color: dimgray; color: darkgoldenrod; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
 				<label for="name" style="color: darkred;">Name:</label> <input type="text"
-					class="form-control" id="name" style="background-color: dimgray; color: darkgoldenrod;">
+					class="form-control" id="name" style="background-color: dimgray; color: darkgoldenrod; border-color: dimgrey;">
 			</div>
-			<button type="button" class="btn pull-right" onclick="savePost(); getAllspgposts()">Submit</button>
+			<button type="button" class="btn pull-right" style="background-color: dimgray; color: darkred;"  onclick="savePost(); getAllspgposts()">Submit</button>
 		</form>
 			</div>
 			

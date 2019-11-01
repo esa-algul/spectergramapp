@@ -9,21 +9,29 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+      body{
+        font-family: monospace;
+        color: darkred;
+        font: bold;
+      }
+    </style>
 </head>
-    <body>
+    <body background="/ouiji bgimage.jpg">
         <div class="container">
-            <nav class="navbar navbar-default">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#">Spectergram</a>
+            <nav class="navbar navbar-default" style="    border-color: dimgrey;">
+                <div class="container-fluid" style="background-color: dimgrey;">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#" style="background-color: dimgrey; color: darkred;">Spectergram</a>
+                  </div>
+                  <ul class="nav navbar-nav" style="background-color: dimgray;">
+                              <li class="active"><a href="index.html" style="background-color: dimgray; color: darkred;">Home</a></li>
+                              <li class="active"><a href="Mainpage.html" style="background-color: dimgray; color: darkred;">Posts</a></li>
+                              <li class="active"><a href="OuijaBoard.html" style="background-color: dimgray; color: darkred;">Ouiji</a></li>
+                              <!-- <li class="active"><a href="SpookyGame.html" style="background-color: dimgray; color: darkred;">Catch Spooky</a></li> -->
+                  </ul>
                 </div>
-                <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li class="active"><a href="Mainpage.html">Posts</a></li>
-                            <li class="active"><a href="OuijaBoard.html">Ouiji</a></li>
-                            <li class="active"><a href="SpookyGame.html">Catch Spooky</a></li>
-                </ul>
               </nav>
     </body>
     <br>
@@ -62,60 +70,59 @@
     <br>
     <br>
     <center>
-        The Spirits Say <input type="text" id="message">
+        The Spirits Say <input type="text" id="message" style="background-color: dimgray; color: darkred;">
     </center>
     <br>
     <br>
     <div>
     <center>    
-        <input type="button" value="Yes" onmouseenter="addtomessage2('Yes')" onmouseleave="mouseout()">
-        <input type="button" value="No" onmouseenter="addtomessage2('No')" onmouseleave="mouseout()">
+        <input type="button" value="Yes" onmouseenter="addtomessage2('Yes')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="No" onmouseenter="addtomessage2('No')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
         <br>
         <br>
-        <input type="button" value="A" onmouseenter="addtomessage('A')" onmouseleave="mouseout()">
-        <input type="button" value="B" onmouseenter="addtomessage('B')" onmouseleave="mouseout()">
-        <input type="button" value="C" onmouseenter="addtomessage('C')" onmouseleave="mouseout()">
-        <input type="button" value="D" onmouseenter="addtomessage('D')" onmouseleave="mouseout()">
-        <input type="button" value="E" onmouseenter="addtomessage('E')" onmouseleave="mouseout()">
-        <input type="button" value="F" onmouseenter="addtomessage('F')" onmouseleave="mouseout()">
-        <input type="button" value="G" onmouseenter="addtomessage('G')" onmouseleave="mouseout()">
-        <input type="button" value="H" onmouseenter="addtomessage('H')" onmouseleave="mouseout()">
-        <input type="button" value="I" onmouseenter="addtomessage('I')" onmouseleave="mouseout()">
-        <input type="button" value="J" onmouseenter="addtomessage('J')" onmouseleave="mouseout()">
-        <input type="button" value="K" onmouseenter="addtomessage('K')" onmouseleave="mouseout()">
-        <input type="button" value="L" onmouseenter="addtomessage('L')" onmouseleave="mouseout()">
-        <input type="button" value="M" onmouseenter="addtomessage('M')" onmouseleave="mouseout()">
+        <input type="button" value="A" onmouseenter="addtomessage('A')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="B" onmouseenter="addtomessage('B')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="C" onmouseenter="addtomessage('C')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="D" onmouseenter="addtomessage('D')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="E" onmouseenter="addtomessage('E')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="F" onmouseenter="addtomessage('F')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="G" onmouseenter="addtomessage('G')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="H" onmouseenter="addtomessage('H')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="I" onmouseenter="addtomessage('I')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="J" onmouseenter="addtomessage('J')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="K" onmouseenter="addtomessage('K')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="L" onmouseenter="addtomessage('L')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="M" onmouseenter="addtomessage('M')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
         <br>
         <br>
-        <input type="button" value="N" onmouseenter="addtomessage('N')" onmouseleave="mouseout()">
-        <input type="button" value="O" onmouseenter="addtomessage('O')" onmouseleave="mouseout()"
-        >
-        <input type="button" value="P" onmouseenter="addtomessage('P')" onmouseleave="mouseout()">
-        <input type="button" value="Q" onmouseenter="addtomessage('Q')" onmouseleave="mouseout()">
-        <input type="button" value="R" onmouseenter="addtomessage('R')" onmouseleave="mouseout()">
-        <input type="button" value="S" onmouseenter="addtomessage('S')" onmouseleave="mouseout()">
-        <input type="button" value="T" onmouseenter="addtomessage('T')" onmouseleave="mouseout()">
-        <input type="button" value="U" onmouseenter="addtomessage('U')" onmouseleave="mouseout()">
-        <input type="button" value="V" onmouseenter="addtomessage('V')" onmouseleave="mouseout()">
-        <input type="button" value="W" onmouseenter="addtomessage('W')" onmouseleave="mouseout()">
-        <input type="button" value="X" onmouseenter="addtomessage('X')" onmouseleave="mouseout()">
-        <input type="button" value="Y" onmouseenter="addtomessage('Y')" onmouseleave="mouseout()">
-        <input type="button" value="Z" onmouseenter="addtomessage('Z')" onmouseleave="mouseout()">
+        <input type="button" value="N" onmouseenter="addtomessage('N')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="O" onmouseenter="addtomessage('O')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="P" onmouseenter="addtomessage('P')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="Q" onmouseenter="addtomessage('Q')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="R" onmouseenter="addtomessage('R')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="S" onmouseenter="addtomessage('S')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="T" onmouseenter="addtomessage('T')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="U" onmouseenter="addtomessage('U')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="V" onmouseenter="addtomessage('V')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="W" onmouseenter="addtomessage('W')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="X" onmouseenter="addtomessage('X')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="Y" onmouseenter="addtomessage('Y')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="Z" onmouseenter="addtomessage('Z')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
         <br>
         <br>
-        <input type="button" value="1" onmouseenter="addtomessage('1')" onmouseleave="mouseout()">
-        <input type="button" value="2" onmouseenter="addtomessage('2')" onmouseleave="mouseout()">
-        <input type="button" value="3" onmouseenter="addtomessage('3')" onmouseleave="mouseout()">
-        <input type="button" value="4" onmouseenter="addtomessage('4')" onmouseleave="mouseout()">
-        <input type="button" value="5" onmouseenter="addtomessage('5')" onmouseleave="mouseout()">
-        <input type="button" value="6" onmouseenter="addtomessage('6')" onmouseleave="mouseout()">
-        <input type="button" value="7" onmouseenter="addtomessage('7')" onmouseleave="mouseout()">
-        <input type="button" value="8" onmouseenter="addtomessage('8')" onmouseleave="mouseout()">
-        <input type="button" value="9" onmouseenter="addtomessage('9')" onmouseleave="mouseout()">
-        <input type="button" value="0" onmouseenter="addtomessage('0')" onmouseleave="mouseout()">
+        <input type="button" value="1" onmouseenter="addtomessage('1')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="2" onmouseenter="addtomessage('2')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="3" onmouseenter="addtomessage('3')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="4" onmouseenter="addtomessage('4')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="5" onmouseenter="addtomessage('5')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="6" onmouseenter="addtomessage('6')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="7" onmouseenter="addtomessage('7')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="8" onmouseenter="addtomessage('8')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="9" onmouseenter="addtomessage('9')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
+        <input type="button" value="0" onmouseenter="addtomessage('0')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;">
         <br>
         <br>
-        <input type="button" value="Good Bye" onmouseenter="addtomessage2(' ')" onmouseleave="mouseout()"> 
+        <input type="button" value="Good Bye" onmouseenter="addtomessage2(' ')" onmouseleave="mouseout()" style="background-color: dimgray; color: darkred;"> 
         <br>
         <br>
         <br>
