@@ -20,8 +20,8 @@ function getAllspgposts() {
 						
 			"<br>"	+		
 	  "<div class='btn-group'>" +
-	    "<button type='button' class='btn' style='background-color: dimgray; color: darkred;' data-toggle='modal' data-target='#exampleModalCenter' onclick = 'showModal(" + spgposts.id +")'>View</button>" +
-	    "<button type='button' class='btn' style='background-color: dimgray; color: darkred;' onclick = 'deletePost(" + spgposts.id +")'>Delete</button>" +
+	    "<button type='button' class='btn' style='background-color: dimgray; color: red;' data-toggle='modal' data-target='#exampleModalCenter' onclick = 'showModal(" + spgposts.id +")'>View</button>" +
+	    "<button type='button' class='btn' style='background-color: dimgray; color: red;' onclick = 'deletePost(" + spgposts.id +")'>Delete</button>" +
 	  	"</div>" + "<br>"
 				)
 
