@@ -71,7 +71,7 @@ outline: none;} */
 		<h2 style="color: red;">Add new Post: </h2>
 		<form>
 			<div class="form-group">
-				<label for="heading" style="color: red;">Heading:</label> <input type="text"
+				<label for="heading" style="color: red; min-width:1px;">Heading:</label> <input type="text"
 					class="form-control" id="heading" style="background-color: dimgray; color: red; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
@@ -83,7 +83,7 @@ outline: none;} */
 					class="form-control" id="city" style="background-color: dimgray; color: red; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
-				<label for="description" style="color: red;">Description:</label> <input type="text"
+				<label for="description" style="color: red; min-width:1px;">Description:</label> <input type="text"
 					class="form-control" id="description" style="background-color: dimgray; color: red; border-color: dimgrey;">
 			</div>
 			<div class="form-group">
@@ -110,7 +110,7 @@ outline: none;} */
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="spgposts.heading" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="spgposts.heading" id="exampleModalLongTitle">Enter your Ghost Story...</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -130,12 +130,14 @@ outline: none;} */
 						    </div>
 						    <div class="form-group col-md-6">
 						      <label>City</label>
-						      <input type="text" class="form-control" id="editcity">
-						    </div>
+						      <input type="text" class="form-control" id="editcity" style="min-width:1px">
+							</div>
+							<br>
 						    <div class="form-group col-md-6">
 						     <label>Description</label>
 						     <input type="text" class="form-control" id="editdescription">
-						    </div>
+							</div>
+							<br>
 						    <div class="form-group col-md-6">
 						      <label>Date</label>
 						     <input type="text" class="form-control" id="editdate">
